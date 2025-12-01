@@ -10,7 +10,7 @@ This tool iterates through student directories, compiles their C programs, execu
 ## 🚀 Key Features
 * **Automated Compilation:** Uses `fork` and `exec` to run `gcc` on student submissions.
 * **Safe Execution:** Runs each student's program in a separate child process.
-* **I/O Redirection:** Uses `dup2` to feed input from a file and capture output to a file automatically.
+* **I/O Redirection:** Uses `dup2` to feed input from a file (`input.txt`) and capture output to a file automatically.
 * **Result Comparison:** Includes a custom comparison module (`Part1.c`) to validate outputs byte-by-byte.
 * **CSV Reporting:** Generates a `results.csv` file with student names and grades.
 
@@ -32,7 +32,7 @@ The system is composed of two main parts:
 * A folder structure containing student sub-directories.
 
 ### 2. Compilation
-Compile the comparator and the main system:
+Compile the comparator and the main system using the following commands:
 ```bash
 gcc Part1.c -o comp.out
 gcc Part2.c -o Grader.out
